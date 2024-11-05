@@ -1,0 +1,27 @@
+# See https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore for more about ignoring files.
+
+# build
+/build
+
+# dependency
+node_modules
+
+# ide
+.idea
+.vscode/*
+*.code-workspace
+
+# next.js
+.next
+.swc
+.vercel
+/out
+next-env.d.ts
+
+# test
+/coverage
+
+# yarn
+.pnp.*
+.yarn/*
+.yarnrc.yml
