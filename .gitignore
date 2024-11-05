@@ -26,6 +26,7 @@ yarn-*.log*
 
 # next.js
 .next
+.swc
 .vercel
 /out
 next-env.d.ts
