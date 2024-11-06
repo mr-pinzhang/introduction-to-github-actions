@@ -32,3 +32,12 @@ jobs:
       - run: yarn install
 
       - run: yarn test
+
+  deployment-preview:
+    name: Deployment (Preview)
+    uses: ./.github/workflows/deployment.yml
+    if: ${{ github.event_name == 'push' }}
+    needs: [lint, unit-test]
+    secrets: inherit
+    with:
+      environment: preview
