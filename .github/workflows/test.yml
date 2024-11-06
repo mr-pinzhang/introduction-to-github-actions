@@ -1,5 +1,9 @@
 name: Test
 
+concurrency:
+  cancel-in-progress: true
+  group: ${{ format('{0} {1}', github.workflow, github.ref) }}
+
 on:
   pull_request:
     branches:
