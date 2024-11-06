@@ -1,11 +1,13 @@
 import Image from 'next/image';
 
+import { TubiLogo } from '@/app/components/TubiLogo';
 import styles from '@/app/page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <TubiLogo />
         <ol>
           <li>
             Get started by editing <code>src/app/page.tsx</code>.
