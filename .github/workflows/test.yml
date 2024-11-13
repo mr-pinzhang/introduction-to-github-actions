@@ -20,9 +20,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # cause this composite actions haven't been merged into default branch, so you'll have to use a `ref` pointer to find it,
-      # otherwise, it shall look like this.
-      # - uses: ./.github/actions/prepare-node
-      - uses: ./.github/actions/prepare-node@feat/add-composite-actions-prepare-nodejs
+      - uses: ./.github/actions/prepare-node
         with:
           node-version: 20
 
@@ -34,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: ./.github/actions/prepare-node@feat/add-composite-actions-prepare-nodejs
+      - uses: ./.github/actions/prepare-node
         with:
           node-version: 20
 
