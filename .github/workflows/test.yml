@@ -19,9 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-
-      - run: yarn install
+      - uses: ./.github/actions/prepare-node
+        with:
+          node-version: 20
 
       - run: yarn lint
 
@@ -31,9 +31,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-
-      - run: yarn install
+      - uses: ./.github/actions/prepare-node
+        with:
+          node-version: 20
 
       - run: yarn test
 
