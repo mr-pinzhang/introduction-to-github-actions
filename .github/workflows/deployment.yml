@@ -2,7 +2,7 @@ name: Deployment
 
 concurrency:
   cancel-in-progress: true
-  group: ${{ format('{0} {1} {2}', github.workflow, inputs.environment) }}
+  group: ${{ format('{0}-{1}', github.workflow, inputs.environment) }}
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
