@@ -2,7 +2,7 @@ import path from 'node:path';
 
 /** @type {import('lint-staged').ConfigFn} */
 function buildEslintCommand(filenames) {
-  return `next lint --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(' --file ')}`;
+  return `eslint --fix ${filenames.map((f) => path.relative(process.cwd(), f)).join(' ')}`;
 }
 
 /** @type {import('lint-staged').Config} */

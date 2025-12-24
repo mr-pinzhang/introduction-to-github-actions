@@ -1,10 +1,13 @@
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import { type Config } from 'jest';
 import nextJest from 'next/jest.js';
-import path from 'path';
 import { pathsToModuleNameMapper } from 'ts-jest';
 
-import tsconfig from './tsconfig.json';
+import tsconfig from './tsconfig.json' with { type: 'json' };
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const baseDir = path.join(__dirname, tsconfig.compilerOptions.baseUrl);
 
 const createJestConfig = nextJest({ dir: baseDir });
